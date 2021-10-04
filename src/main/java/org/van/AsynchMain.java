@@ -1,3 +1,5 @@
+package org.van;
+
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.Connection;

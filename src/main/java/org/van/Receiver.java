@@ -1,3 +1,5 @@
+package org.van;
+
 import javax.jms.*;
 
 public  class Receiver implements Runnable, MessageListener {
