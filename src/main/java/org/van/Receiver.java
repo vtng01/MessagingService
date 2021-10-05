@@ -14,7 +14,7 @@ public  class Receiver implements Runnable, MessageListener {
 
     public void run() {
         try {
-            MessageConsumer consumer = session.createConsumer(session.createQueue(destination));
+            MessageConsumer consumer = session.createConsumer(session.createQueue(destination), "JMSPriority > 4");
             consumer.setMessageListener(this);
         } catch (JMSException e) {
             throw new RuntimeException(e);

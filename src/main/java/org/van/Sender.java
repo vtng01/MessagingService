@@ -38,6 +38,7 @@ public  class Sender implements Runnable {
             while (counter < howManyToSend) {
                 TextMessage message = session.createTextMessage("Message " + this.message);
                 message.setJMSMessageID(UUID.randomUUID().toString());
+//                message.setJMSReplyTo(session.createQueue(this.destination));
                 messageProducer.setPriority(this.priority);
                 messageProducer.send(message);
                 System.out.printf("Sent %d: %s%n", counter, message);
